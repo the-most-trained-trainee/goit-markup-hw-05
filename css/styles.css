@@ -69,9 +69,11 @@ body {
     color:var(--main-text-color);
     padding-top: 32px;
     padding-bottom: 32px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.navi-links a:hover {
+.navi-links a:hover,
+.navi-links a:focus {
     color: var(--text-hover-color);
 }
 
@@ -98,9 +100,11 @@ body {
     letter-spacing: 0.02em;
     color: var(--description-color);
     text-decoration: none;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.contact-list a:hover, a:focus {
+.contact-list a:hover, 
+.contact-list a:focus {
     color: var(--text-hover-color);
 }
 
@@ -113,9 +117,11 @@ body {
     color: rgba(255, 255, 255, 0.6);
     text-decoration: none;
     font-style: normal;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.contact-details a:hover, a:focus {
+.contact-details a:hover,
+.contact-details a:focus {
     color: var(--text-hover-color);
 }
 
@@ -204,7 +210,7 @@ body {
 
 .filter-button {
     display: flex;
-    background: #F5F4FA;
+    background-color: #F5F4FA;
     border-radius: 4px;
     font-weight: 500;
     font-size: 16px;
@@ -218,19 +224,15 @@ body {
     padding-right: 22px;
     padding-top: 6px;
     padding-bottom: 6px;
-    
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.filter-button:hover {
-    background:var(--text-hover-color);
+.filter-button:hover, 
+.filter-button:focus {
+    background-color:var(--text-hover-color);
     color: var(--button-hero-color);
     cursor: pointer;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.filter-button:focus {
-    background:var(--text-hover-color);
-    color: var(--button-hero-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -371,6 +373,7 @@ footer {
 
 .project-container {
     display: block;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .project-container:hover {
@@ -452,7 +455,7 @@ footer {
     width: 16px;
     height: 12px;
     margin-right: 10px;
-
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact2-content {
@@ -465,6 +468,7 @@ footer {
     width: 10px;
     height: 16px;
     margin-right: 10px;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact1-content:hover .contact1-svg {
@@ -513,6 +517,7 @@ footer {
     height: 20px;
     height: 20px;
     fill: #AFB1B8;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .network-hover {
@@ -524,6 +529,8 @@ footer {
     height: 44px;
     width: 44px;
     background-color: #ffffff;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .network-hover:hover {
@@ -544,11 +551,6 @@ footer {
     fill: #ffffff;
 }
 
-.client-card {
-    display: block;
-    border: 1px solid #AFB1B8;
-    border-radius: 4px;
-}
 
 .client-list {
     display: flex;
@@ -563,6 +565,13 @@ footer {
     margin-right: 30px;
 }
 
+.client-card {
+    display: block;
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .client-pict {
     width: 106px;
     height: 60px;
@@ -571,25 +580,21 @@ footer {
     margin-right: 32px;
     margin-top: 16px;
     margin-bottom: 16px;
+    transition: fill 2250ms;
+}
+
+.client-card:hover, 
+.client-card:focus {
+    border-color: #2196F3;
+    cursor: pointer;
 }
 
 .client-card:hover .client-pict {
     fill: #2196F3;
 }
 
-.client-card:hover {
-    border-color: #2196F3;
-    cursor: pointer;
-}
-
-
 .client-card:focus .client-pict {
     fill: #2196F3;
-}
-
-.client-card:focus {
-    border-color: #2196F3;
-    cursor: pointer;
 }
 
 /* = footer  */
@@ -647,19 +652,10 @@ footer {
     height: 44px;
     width: 44px;
     background-color: rgba(255, 255, 255, 0.10);
-
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.footer-network-hover:hover {
-    background-color: var(--text-hover-color);
-    cursor: pointer;
-}
-
-.footer-network-hover:hover .network-icon {
-    fill: #ffffff;
-}
-
+.footer-network-hover:hover,
 .footer-network-hover:focus {
     background-color: var(--text-hover-color);
     cursor: pointer;
@@ -667,6 +663,13 @@ footer {
 
 .footer-container {
     display: flex;
+}
+
+.details-attention-pict,
+.punctuality-pict,
+.planning-pict,
+.uptodate {
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .details-attention:hover .details-attention-pict {
@@ -686,26 +689,28 @@ footer {
 }
 
 .menu-link {
-    position: relative;
     display: block;
+    position: relative;
 }
 
 .menu-link::after {
+    display: block;
     content: "";
     position: absolute;
-    display: block;
     width: 100%;
     height: 4px;
     background-color:var(--text-hover-color);
     left: 0;
     bottom: 0;
-    display: none;
     border-radius: 2px;
     margin-bottom: -1px;
+    opacity: 0;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.menu-link:hover::after {
-    display: block;
+.menu-link:hover::after, 
+.menu-link:focus::after {
+    opacity: 1;
 }
 
 .activity-thumb {
@@ -807,20 +812,16 @@ footer {
     display: block;
     position: absolute;
     bottom: 0;
-
     color: #FFFFFF;
-
     padding-left: 24px;
     padding-right: 24px;
     padding-top: 63px;
-
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
     line-height: 28px;
     letter-spacing: 0.03em;
-
     background: rgba(33, 150, 243, 0.9);
     width: 370px;
     height: 293px;
