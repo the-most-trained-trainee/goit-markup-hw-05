@@ -12,11 +12,3 @@
       refs.modal.classList.toggle("is-hidden");
     }
   })();
-
-
-//   <body>
-//   <!-- Вся твоя розмітка, включно з розміткою модалки -->
-
-//   <!-- Ставимо перед закриваючим тегом body -->
-//   <script src="./js/modal.js"></script>
-// </body>
